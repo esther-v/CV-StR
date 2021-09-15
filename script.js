@@ -1,6 +1,5 @@
 class Portfolio{
 
-
     constructor(selector){
         this.activeContent = null
         this.activeItem = null
@@ -15,10 +14,7 @@ class Portfolio{
                 this.show(child)
             } )
         })
-        //on clique sur un projet js-item
-         // on supp l'élément actif
-
-         // on insère ce clone après mon élément js-item
+        
     }
     //Affiche le contenu d'un projet au clic
     show(child) {
@@ -76,5 +72,5 @@ class Portfolio{
 
 }
 
-new Portfolio('#js-portfolio')
+
 
