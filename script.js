@@ -1,3 +1,27 @@
+//anim navbar
+
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 30) {
+        nav.classList.add('anim-nav');
+    } else {
+        nav.classList.remove('anim-nav');
+    }
+})
+
+
+//menu
+let burgerButton = document.querySelector('.burger');
+let menu = document.querySelector('.menu');
+
+burgerButton.addEventListener('click', () => {
+    menu.classList.toggle('open')
+})
+
+
+
+
 class Portfolio{
 
     constructor(selector){
@@ -72,5 +96,6 @@ class Portfolio{
 
 }
 
+new Portfolio('#js-portfolio');
 
 

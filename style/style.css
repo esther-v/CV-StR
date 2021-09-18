@@ -1,11 +1,118 @@
-body {
-  color: #5a5a5a;
+*, ::after, ::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  color: #5a5a5a;
+}
+
+section {
+  height: 100vh;
+  padding: 30px;
+}
+
+h2 {
+  margin: 0 0 5px;
+  padding: 0;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  z-index: 15;
+  border: 1px solid blue;
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+nav .click-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav .click-menu a {
+  display: flex;
+  align-items: center;
+}
+nav .click-menu a span {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+nav .click-menu a span:first-child {
+  margin-right: 5px;
+}
+nav .click-menu a span:last-child {
+  margin-left: 5px;
+}
+nav .click-menu .burger {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+nav .click-menu .burger span {
+  margin-bottom: 3px;
+  background-color: white;
+  height: 3px;
+  width: 25px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+nav .open {
+  opacity: 1;
+}
+
+.anim-nav {
+  background: #1d282b;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.bienvenue {
+  background-image: linear-gradient(0deg, rgba(209, 207, 207, 0.3617822129) 0%, rgba(0, 0, 0, 0.4682247899) 89%), url("../agustin-diaz-gargiulo--unsplash.png");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: content-box;
+  z-index: 1;
+}
+.bienvenue p {
+  padding: 40px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.bienvenue .license {
+  font-size: 11px;
+  color: white;
+  text-align: left;
+  position: absolute;
+  top: 83%;
+  left: -35px;
+}
+.bienvenue .license a {
+  color: white;
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 50px;
   text-transform: uppercase;
   font-weight: 700;
   background-image: linear-gradient(90deg, #000, #fff, #000);
@@ -18,9 +125,8 @@ h1 {
   background-size: 80%;
   animation: shine 5s linear 1;
   position: relative;
-  stroke: #000;
-  stroke-width: 1px;
   margin: 0 auto;
+  padding-top: 140px;
 }
 
 @keyframes shine {
@@ -31,16 +137,32 @@ h1 {
     background-position-x: 500%;
   }
 }
-h2 {
-  margin: 0 0 5px;
-  padding: 0;
-  color: black;
+.recherche {
+  border: 1px solid black;
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+.resume p:first-child {
+  text-align: center;
+  font-size: 28px;
+}
+
+.recherche p:nth-child(3) {
+  text-align: center;
+}
+.recherche p:nth-child(4) {
+  text-align: right;
 }
 
 .container-projects {
-  max-width: 1000px;
-  padding: 0 20px;
-  margin: 0 auto;
+  border: 1px solid red;
+  height: auto;
+  background-color: aquamarine;
+}
+.container-projects h2 {
+  padding-top: 10px;
 }
 .container-projects .portfolio {
   display: grid;
@@ -55,7 +177,7 @@ h2 {
   counter-increment: portfolio;
 }
 .container-projects .portfolio .project .project_image {
-  width: 100%;
+  width: 200px;
   height: auto;
 }
 .container-projects .portfolio .project .project_name::after {
@@ -66,12 +188,78 @@ h2 {
   overflow: hidden;
 }
 
-@media screen and (min-width: 640px) {
-  .container-projects .portfolio {
-    grid-template-columns: repeat(4, 1fr);
+.experiences {
+  background: lightgrey;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+}
+
+.anim-flip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+.anim-flip #flip {
+  text-align: center;
+  height: 50px;
+  overflow: hidden;
+}
+.anim-flip #flip > div > div {
+  height: 50px;
+  padding: 4px 12px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+.anim-flip #flip div:first-child {
+  animation: show 7s linear 2;
+}
+.anim-flip #flip div div {
+  background: #506D84;
+  color: white;
+}
+.anim-flip #flip div:first-child div {
+  background: #6D8299;
+}
+.anim-flip #flip div:last-child div {
+  background: #343A40;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
   }
-  .container-projects .portfolio .project_body {
-    grid-column: span 4;
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 270px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .container-projects {
+    height: 100vh;
+  }
+  .container-projects .portfolio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container-projects .project_body {
+    grid-column: span 3;
   }
 }
 
