@@ -11,17 +11,41 @@ window.addEventListener('scroll', () => {
 })
 
 
-//menu
+// menu
 let burgerButton = document.querySelector('.burger');
 let menu = document.querySelector('.menu');
+let links = document.querySelectorAll('.menu li a')
+
 
 burgerButton.addEventListener('click', () => {
     menu.classList.toggle('open')
+    burgerButton.classList.toggle('burger-cross')
 })
 
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('open')
+        burgerButton.classList.remove('burger-cross')
+    })
+})
+
+//cursor animation
+
+//anim element scroll appear
+function scrollAppear(){
+    const rechercheText = document.querySelector('.recherche');
+    const recherchePosition = rechercheText.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if(recherchePosition < screenPosition){
+        rechercheText.classList.add('recherche-appear');
+    }
+}
+
+window.addEventListener('scroll', scrollAppear);
 
 
-
+//portfolio
 class Portfolio{
 
     constructor(selector){
