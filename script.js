@@ -33,19 +33,23 @@ links.forEach(link => {
 
 //anim element scroll appear
 function scrollAppear(){
-    const rechercheText = document.querySelector('.recherche');
-    const recherchePosition = rechercheText.getBoundingClientRect().top;
+    const scrolledText = document.querySelectorAll('.scrolled');
     const screenPosition = window.innerHeight / 1.3;
 
-    if(recherchePosition < screenPosition){
-        rechercheText.classList.add('recherche-appear');
-    }
+    scrolledText.forEach(text => {
+        let textPosition = text.getBoundingClientRect().top; 
+        if(textPosition < screenPosition){
+            text.classList.add('scroll-appear');
+        } else {
+            text.classList.remove('scroll-appear');
+        }
+    })   
 }
 
 window.addEventListener('scroll', scrollAppear);
 
 
-//portfolio
+//portfolio avec méthodes des classes
 class Portfolio{
 
     constructor(selector){
