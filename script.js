@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
 // menu
 let burgerButton = document.querySelector('.burger');
 let menu = document.querySelector('.menu');
-let links = document.querySelectorAll('.menu li a')
+let links = document.querySelectorAll('nav a')
 
 
 burgerButton.addEventListener('click', () => {
@@ -29,7 +29,6 @@ links.forEach(link => {
     })
 })
 
-//cursor animation
 
 //anim element scroll appear
 function scrollAppear(){
