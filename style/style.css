@@ -168,7 +168,7 @@ h1 {
   }
 }
 .resume {
-  min-height: 120vh;
+  min-height: 130vh;
 }
 
 .box {
@@ -232,6 +232,13 @@ h1 {
 .container-projects {
   height: auto;
   background: #C1E4E6;
+  position: relative;
+}
+.container-projects .drawing {
+  position: absolute;
+  left: 0;
+  top: -120px;
+  height: 200px;
 }
 .container-projects h2 {
   text-align: center;
