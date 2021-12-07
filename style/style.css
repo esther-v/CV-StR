@@ -12,7 +12,7 @@ body {
 
 section {
   height: 100vh;
-  padding: 30px;
+  padding: 50px;
 }
 
 h2 {
@@ -35,7 +35,7 @@ nav .click-menu {
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 nav .click-menu a {
   display: flex;
@@ -117,6 +117,7 @@ nav ul a:hover {
   background-image: linear-gradient(0deg, rgba(201, 201, 201, 0.362) 0%, rgba(0, 0, 0, 0.468) 89%), url("../agustin-diaz-gargiulo--unsplash.png");
   background-size: cover;
   background-position: bottom;
+  filter: grayscale(90%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: content-box;
   z-index: 1;
@@ -155,7 +156,7 @@ h1 {
   animation: shine 5s linear 1;
   position: relative;
   margin: 0 auto;
-  padding-top: 140px;
+  padding-top: 80px;
 }
 
 @keyframes shine {
@@ -167,49 +168,46 @@ h1 {
   }
 }
 .resume {
-  height: 120vh;
+  min-height: 120vh;
+}
+
+.box {
+  width: 400px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s all ease-in-out;
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  color: #f1f1f1;
+  box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
+}
+.box:hover {
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.25);
+}
+.box h2 {
+  color: #c7ecee;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .recherche {
-  border: 1px solid black;
-  width: 400px;
-  padding: 20px;
-  text-align: center;
   margin: 50px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.5s all ease-in-out;
-}
-.recherche p:nth-child(3) {
-  text-align: center;
-}
-.recherche p:nth-child(4) {
-  text-align: right;
-}
-
-.specialite, .profil {
-  border: 1px solid black;
-  width: 400px;
-  padding: 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.5s all ease-in-out;
-}
-.specialite i, .profil i {
-  font-size: 27px;
-  margin-left: 10px;
-}
-.specialite img, .profil img {
-  height: 25px;
-}
-.specialite .express, .profil .express {
-  height: 13px;
-  width: 45px;
 }
 
 .specialite {
   margin: 50px auto;
+}
+.specialite i {
+  font-size: 27px;
+  margin-left: 10px;
+}
+.specialite img {
+  height: 25px;
+}
+.specialite .express {
+  height: 13px;
+  width: 45px;
 }
 
 .profil {
@@ -232,15 +230,19 @@ h1 {
 }
 
 .container-projects {
-  border: 1px solid red;
   height: auto;
-  background-color: #b3cdd1;
-  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  background: #C1E4E6;
 }
 .container-projects h2 {
+  text-align: center;
+  margin: 0 auto 50px;
+  text-transform: uppercase;
+}
+.container-projects h3 {
   padding: 10px;
 }
 .container-projects .portfolio {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 20px;
@@ -259,77 +261,19 @@ h1 {
   overflow: hidden;
 }
 
-.experiences {
-  background: #fcfafa;
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  padding-top: 15%;
-}
-
-.anim-flip {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-}
-.anim-flip #flip {
-  text-align: center;
-  height: 50px;
-  overflow: hidden;
-}
-.anim-flip #flip > div > div {
-  height: 50px;
-  padding: 4px 12px;
-  margin-bottom: 45px;
-  display: inline-block;
-}
-.anim-flip #flip div:first-child {
-  animation: show 7s linear 2;
-}
-.anim-flip #flip div div {
-  background: #506D84;
-  color: white;
-}
-.anim-flip #flip div:first-child div {
-  background: #6D8299;
-}
-.anim-flip #flip div:last-child div {
-  background: #343A40;
-}
-
-@keyframes show {
-  0% {
-    margin-top: -270px;
-  }
-  5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
-    margin-top: -90px;
-  }
-  66% {
-    margin-top: -90px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: 270px;
-  }
-}
 @media screen and (min-width: 700px) {
   .container-projects {
     height: 100vh;
   }
   .container-projects .portfolio {
     grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+  .container-projects .portfolio .project {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
   .container-projects .project_body {
     grid-column: span 3;
@@ -337,6 +281,13 @@ h1 {
 }
 .fa {
   display: inline-block;
+}
+
+.experiences {
+  background: #fcfafa;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding-top: 15%;
 }
 
 /*# sourceMappingURL=style.css.map */
