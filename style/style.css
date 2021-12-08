@@ -59,7 +59,7 @@ nav .click-menu .burger {
   cursor: pointer;
 }
 nav .click-menu .burger:hover > span {
-  background-color: #69DADB;
+  background-color: #7ed6df;
 }
 nav .click-menu .burger span {
   margin-bottom: 3px;
@@ -169,6 +169,14 @@ h1 {
 }
 .resume {
   min-height: 130vh;
+  position: relative;
+}
+
+.collaborate {
+  position: absolute;
+  opacity: 0.1;
+  right: 0;
+  top: 10rem;
 }
 
 .box {
@@ -177,8 +185,7 @@ h1 {
   opacity: 0;
   transform: translateY(20px);
   transition: 0.5s all ease-in-out;
-  background-color: #7f5a83;
-  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   color: #f1f1f1;
   box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
 }
@@ -186,7 +193,7 @@ h1 {
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.25);
 }
 .box h2 {
-  color: #c7ecee;
+  color: #7ed6df;
   margin-bottom: 40px;
   text-align: center;
 }
