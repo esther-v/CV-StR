@@ -86,6 +86,7 @@ class Portfolio{
             this.scrollTo(child, offset)
             this.activeContent = content
             this.activeItem = child
+            
         }
         
     }
@@ -112,12 +113,13 @@ class Portfolio{
         }, 500)
     }
 
-    //Fait défiler la fenêtre jusqu'à l'élément
+    // Fait défiler la fenêtre jusqu'à l'élément
     scrollTo (element, offset = 0) {
         window.scrollTo({
             behavior : "smooth",
             left : 0,
             top : element.offsetTop - offset
+            
         })
     }
 
