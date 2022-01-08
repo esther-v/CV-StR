@@ -11,7 +11,6 @@ body {
 }
 
 section {
-  height: 100vh;
   padding: 50px;
 }
 
@@ -83,9 +82,6 @@ nav a {
   text-decoration: none;
   color: white;
 }
-nav a:hover {
-  border-bottom: 1px solid gren;
-}
 nav ul {
   display: flex;
   flex-direction: column;
@@ -100,7 +96,7 @@ nav ul {
   padding: 20px;
 }
 nav ul a:hover {
-  border-bottom: 2px solid #69DADB;
+  border-bottom: 2px solid #7ed6df;
 }
 
 .menu {
@@ -117,7 +113,8 @@ nav ul a:hover {
 }
 
 .bienvenue {
-  background-image: linear-gradient(0deg, rgba(201, 201, 201, 0.362) 0%, rgba(0, 0, 0, 0.468) 89%), url("../agustin-diaz-gargiulo--unsplash.png");
+  height: 100vh;
+  background-image: linear-gradient(0deg, rgba(201, 201, 201, 0.362) 0%, rgba(0, 0, 0, 0.468) 89%), url("../images/agustin-diaz-gargiulo--unsplash.png");
   background-size: cover;
   background-position: bottom;
   filter: grayscale(90%);
@@ -173,6 +170,14 @@ h1 {
 .resume {
   min-height: 130vh;
   position: relative;
+}
+
+.drawing {
+  position: absolute;
+  left: 0;
+  bottom: -79px;
+  height: 200px;
+  z-index: 12;
 }
 
 .collaborate {
@@ -249,19 +254,15 @@ h1 {
 }
 
 .container-projects {
-  height: auto;
-  padding-bottom: 100px;
+  height: 100%;
+  padding-bottom: 150px;
   background-color: #bfe1e4;
   background-image: linear-gradient(315deg, #bfe1e4 0%, #f5f7f6 74%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  clip-path: content-box;
 }
 .container-projects .titre-projets {
   position: relative;
-}
-.container-projects .drawing {
-  position: absolute;
-  left: 0;
-  top: -170px;
-  height: 200px;
 }
 .container-projects h3 {
   padding: 10px;
@@ -273,10 +274,42 @@ h1 {
   grid-column-gap: 20px;
   grid-auto-flow: row dense;
   padding-top: 20px;
+  height: auto;
 }
 .container-projects .portfolio .project {
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+.container-projects .portfolio .project .project_description span {
+  color: white;
+  font-size: 14px;
+  padding: 0.05rem 0.2rem;
+}
+.container-projects .portfolio .project .project_description .react {
+  background: #61DAFB;
+}
+.container-projects .portfolio .project .project_description .redux {
+  background: #764ABC;
+}
+.container-projects .portfolio .project .project_description .node {
+  background: #679f63;
+}
+.container-projects .portfolio .project .project_description .express {
+  background: #EEEEEE;
+  color: black;
+}
+.container-projects .portfolio .project .project_description .mysql {
+  background: #4479A0;
+}
+.container-projects .portfolio .project .project_description .api {
+  background: black;
+}
+.container-projects .portfolio .project .project_description .js {
+  background: #F7E017;
+  color: black;
+}
+.container-projects .portfolio .project .project_description .sass {
+  background: #CE679B;
 }
 .container-projects .portfolio .project .project_image {
   width: 250px;
@@ -288,9 +321,6 @@ h1 {
 }
 
 @media screen and (min-width: 700px) {
-  .container-projects {
-    height: 100vh;
-  }
   .container-projects .portfolio {
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;

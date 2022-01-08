@@ -14,7 +14,6 @@ body{
 }
 
 section{
-    height: 100vh;
     padding: 50px;
 }
 
@@ -92,9 +91,6 @@ nav{
     a {
         text-decoration: none;
         color: white;
-        &:hover{
-            border-bottom: 1px solid gren;
-        }
     }
     ul{
         display: flex;
@@ -109,7 +105,7 @@ nav{
         z-index: 10;
         padding: 20px;
         a:hover {
-            border-bottom: 2px solid #69DADB;
+            border-bottom: 2px solid #7ed6df;
         }
     }
   
@@ -128,9 +124,10 @@ nav{
 }
 
 .bienvenue{
+    height: 100vh;
     background-image: 
     linear-gradient(0deg, rgba(201, 201, 201, 0.362) 0%, rgba(0, 0, 0, 0.468) 89%),
-    url('../agustin-diaz-gargiulo--unsplash.png');
+    url('../images/agustin-diaz-gargiulo--unsplash.png');
     background-size: cover;
     background-position: bottom;
     filter: grayscale(90%);
@@ -193,8 +190,15 @@ h1{
 .resume{
     min-height: 130vh;
     position: relative;
-    
-    
+     
+}
+
+.drawing{
+    position: absolute;
+    left: 0;
+    bottom: -79px;
+    height: 200px;
+    z-index: 12;
 }
 .collaborate{
     position: absolute;
@@ -274,23 +278,20 @@ h1{
 //----Réalisations
 
 .container-projects{
-    height: auto;
+    height: 100%;
     // background: #C1E4E6;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     background-color: #bfe1e4;
     background-image: linear-gradient(315deg, #bfe1e4 0%, #f5f7f6 74%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: content-box;
+  
 
     .titre-projets{
         position: relative;
     }
 
     
-    .drawing{
-        position: absolute;
-        left: 0;
-        top: -170px;
-        height: 200px;
-    }
     
     
     h3{
@@ -303,9 +304,43 @@ h1{
         grid-column-gap: 20px;
         grid-auto-flow: row dense;
         padding-top: 20px;
+        height: auto;
         .project {
             cursor: pointer;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
+            .project_description{
+                span{
+                    color: white;
+                    font-size: 14px;
+                    padding: 0.05rem 0.2rem;
+                }
+                .react{
+                    background: #61DAFB;
+                }
+                .redux{
+                    background: #764ABC;
+                }
+                .node{
+                    background: #679f63;
+                }
+                .express{
+                    background: #EEEEEE;
+                    color: black;
+                }
+                .mysql{
+                    background: #4479A0;
+                }
+                .api{
+                    background: black;
+                }
+                .js{
+                    background: #F7E017;
+                    color: black;
+                }
+                .sass{
+                    background: #CE679B;
+                }
+            }
             .project_image{
                 width: 250px;
                 height: auto;
@@ -325,7 +360,6 @@ h1{
 
 @media screen and (min-width: 700px){
     .container-projects {
-        height: 100vh;
         .portfolio{
             grid-template-columns: repeat(3, 1fr);
             margin: 0 auto;
@@ -348,7 +382,6 @@ h1{
 //Experiences
 
 .experiences{
-      
     p{
         text-align: center;
     }
