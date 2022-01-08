@@ -339,60 +339,6 @@ h1 {
   text-align: center;
 }
 
-.anim-flip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-}
-.anim-flip #flip {
-  text-align: center;
-  height: 50px;
-  overflow: hidden;
-}
-.anim-flip #flip > div > div {
-  height: 50px;
-  padding: 4px 12px;
-  margin-bottom: 45px;
-  display: inline-block;
-}
-.anim-flip #flip div div {
-  background: #506D84;
-  color: white;
-}
-.anim-flip #flip div:first-child div {
-  background: #6D8299;
-}
-.anim-flip #flip div:last-child div {
-  background: #343A40;
-}
-
-@keyframes show {
-  0% {
-    margin-top: -270px;
-  }
-  5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
-    margin-top: -90px;
-  }
-  66% {
-    margin-top: -90px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: 270px;
-  }
-}
 .chat-bot {
   width: 100px;
 }
@@ -404,6 +350,24 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.carroussel {
+  width: 100%;
+  overflow: hidden;
+}
+.carroussel .image-container {
+  display: flex;
+  transition: transform 0.4s linear;
+  transform: translateX(0);
+}
+.carroussel .image-container .slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carroussel .image-container .slide img {
+  height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
