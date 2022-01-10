@@ -337,6 +337,8 @@ h1 {
 }
 .experiences p {
   text-align: center;
+  font-size: 18px;
+  line-height: 2rem;
 }
 
 .chat-bot {
@@ -357,10 +359,10 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 4));
+    transform: translateX(calc(-250px * 7));
   }
 }
-.carroussel {
+.slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
@@ -369,7 +371,7 @@ footer {
   position: relative;
   width: 960px;
 }
-.carroussel::before, .carroussel::after {
+.slider::before, .slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100px;
@@ -377,34 +379,23 @@ footer {
   width: 200px;
   z-index: 2;
 }
-.carroussel::after {
+.slider::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
 }
-.carroussel::before {
+.slider::before {
   left: 0;
   top: 0;
 }
-.carroussel .image-container {
-  animation: scroll 20s linear infinite;
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 8);
+  width: calc(250px * 10);
 }
-.carroussel .slide {
+.slider .slide {
   height: 100px;
   width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.carroussel .slide img {
-  height: 60px;
-  width: 250px;
-  object-fit: contain;
-}
-.carroussel .slide .klesia {
-  height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

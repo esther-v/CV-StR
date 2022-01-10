@@ -384,6 +384,8 @@ h1{
 .experiences{
     p{
         text-align: center;
+        font-size: 18px;
+        line-height: 2rem;
     }
 }
 
@@ -400,20 +402,89 @@ footer{
     justify-content: center;
 }
 
-//carroussel
+
+// @mixin white-gradient {
+// 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+// }
+
+// $animationSpeed: 40s;
+
+
+// @keyframes scroll {
+// 	0% { transform: translateX(0); }
+// 	100% { transform: translateX(calc(-250px * 7))}
+// }
+
+// .carroussel {
+// 	background: white;
+// 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+// 	height: 100px;
+// 	margin: 2rem auto;
+// 	overflow:hidden;
+// 	position: relative;
+// 	width: 960px;
+   
+	
+// 	&::before,
+// 	&::after {
+// 		@include white-gradient;
+// 		content: "";
+// 		height: 100px;
+// 		position: absolute;
+// 		width: 200px;
+// 		z-index: 2;
+// 	}
+	
+// 	&::after {
+// 		right: 0;
+// 		top: 0;
+// 		transform: rotateZ(180deg);
+// 	}
+
+// 	&::before {
+// 		left: 0;
+// 		top: 0;
+// 	}
+	
+// 	.image-container {
+// 		animation: scroll $animationSpeed linear infinite;
+// 		display: flex;
+// 		width: calc(250px * 8);
+// 	}
+	
+// 	.slide {
+// 		height: 100px;
+// 		width: 250px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+        
+//         img{
+//             height: 60px;
+//             width: 250px;
+//             object-fit: contain;
+//         }
+//         .klesia{
+//             height: 40px;
+//         }
+// 	}
+// }
+
 @mixin white-gradient {
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 
-$animationSpeed: 20s;
+$animationSpeed: 40s;
 
 // Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 4))}
+	100% { transform: translateX(calc(-250px * 7))}
 }
 
-.carroussel {
+
+// Styling
+.slider {
 	background: white;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 100px;
@@ -443,26 +514,14 @@ $animationSpeed: 20s;
 		top: 0;
 	}
 	
-	.image-container {
+	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-		width: calc(250px * 8);
+		width: calc(250px * 10);
 	}
 	
 	.slide {
 		height: 100px;
-		width: 250px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // border : 1px solid red;
-        img{
-            height: 60px;
-            width: 250px;
-            object-fit: contain;
-        }
-        .klesia{
-            height: 40px;
-        }
+		width: 250px;   
 	}
 }
