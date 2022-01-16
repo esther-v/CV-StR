@@ -127,20 +127,8 @@ class Portfolio{
 
 new Portfolio('#js-portfolio');
 
-//carroussel
+//image scale it
 
-const imgs = document.getElementById('imgs')
-const slide = document.querySelectorAll('.slide')
 
-let idx = 0
 
-function run() {
-    idx ++;
 
-    if(idx > slide.length - 1) {
-        idx = 0
-    }
-    imgs.style.transform = `translateX(${-idx * 300}px)`
-}
-
-// setInterval(run, 3000)

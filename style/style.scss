@@ -186,9 +186,8 @@ h1{
 
 //------ Resume
 .resume{
-    min-height: 100vh;
+    min-height: 120vh;
     position: relative;
-     
 }
 
 .drawing{
@@ -351,7 +350,6 @@ h1{
 
 
 
-
 //Experiences
 
 .experiences{
@@ -423,7 +421,7 @@ $animationSpeed: 40s;
 
 //section contact
 .contact{
-    padding-top: 140px;
+    padding-top: 180px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
     clip-path: content-box;
@@ -431,13 +429,60 @@ $animationSpeed: 40s;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .bulle-contact{
-        width: 100px;
-    }
     .container-contact{
         display: flex;
-    }
+        width: 60%;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            *{
+                width: min(600px, 92%);
+                height: 40px;
+                background: #EAEAEA;
+                border-radius: 6px;
+                padding: 15px 30px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                color: #828282;
+                border: none;
+                font-family: inherit;
+            }
+            textarea{
+                height: 100px;
+            }
+            
+            *:last-child{
+            width: 140px;
+            background: #1d282b;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 47px;
+            font-size: 16px;
+            color: #FFFFFF;
+            height: auto;
+            font-weight: bold;
+            margin: 0;
+            }
+        }
+        .infos-contact{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            .bulle-contact{
+                width: 100px;
+               
+            }
+        }
+        
+    }  
 }
+
 
 footer{
     height: 12vh;
