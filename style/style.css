@@ -168,7 +168,7 @@ h1 {
   }
 }
 .resume {
-  min-height: 130vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -204,11 +204,12 @@ h1 {
   color: #7ed6df;
   text-align: center;
   font-size: 26px;
+  margin-bottom: 10px;
 }
 .box p {
   font-size: 18px;
   text-align: center;
-  line-height: 2rem;
+  line-height: 1.7rem;
 }
 
 .recherche {
@@ -256,9 +257,8 @@ h1 {
 .container-projects {
   height: 100%;
   padding-bottom: 150px;
-  background-color: #bfe1e4;
-  background-image: linear-gradient(315deg, #bfe1e4 0%, #f5f7f6 74%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path: content-box;
 }
 .container-projects .titre-projets {
@@ -320,38 +320,10 @@ h1 {
   overflow: hidden;
 }
 
-@media screen and (min-width: 700px) {
-  .container-projects .portfolio {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
-  }
-  .container-projects .portfolio .project {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .container-projects .project_body {
-    grid-column: span 3;
-  }
-}
 .experiences p {
   text-align: center;
   font-size: 18px;
   line-height: 2rem;
-}
-
-.chat-bot {
-  width: 100px;
-}
-
-footer {
-  height: 12vh;
-  background: #1d282b;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @keyframes scroll {
@@ -370,6 +342,7 @@ footer {
   overflow: hidden;
   position: relative;
   width: 960px;
+  margin: 30px auto;
 }
 .slider::before, .slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -396,6 +369,48 @@ footer {
 .slider .slide {
   height: 100px;
   width: 250px;
+}
+
+.contact {
+  padding-top: 140px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+  clip-path: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .bulle-contact {
+  width: 100px;
+}
+.contact .container-contact {
+  display: flex;
+}
+
+footer {
+  height: 12vh;
+  background: #1d282b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 700px) {
+  .container-projects .portfolio {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+  .container-projects .portfolio .project {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-projects .project_body {
+    grid-column: span 3;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

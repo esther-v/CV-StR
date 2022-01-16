@@ -9,8 +9,7 @@
 
 body{
     color: #5a5a5a;
-    font-family: 'Montserrat', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif;  
 }
 
 section{
@@ -176,7 +175,6 @@ h1{
 }
 
 
-
 @keyframes shine {
   0% {
     background-position-x: -500%;
@@ -188,7 +186,7 @@ h1{
 
 //------ Resume
 .resume{
-    min-height: 130vh;
+    min-height: 100vh;
     position: relative;
      
 }
@@ -225,11 +223,12 @@ h1{
         color: #7ed6df;
         text-align: center;
         font-size: 26px;
+        margin-bottom: 10px;
     }
     p{
         font-size: 18px;
         text-align: center;
-        line-height: 2rem;
+        line-height: 1.7rem;
     }
 
 }
@@ -258,12 +257,10 @@ h1{
     right: 80px;
 }
 
-
 .scroll-appear{
     opacity: 1;
     transform: translateY(0px);
 }
-
 
 .resume p:first-child{
     text-align: center;
@@ -279,20 +276,15 @@ h1{
 
 .container-projects{
     height: 100%;
-    // background: #C1E4E6;
     padding-bottom: 150px;
-    background-color: #bfe1e4;
-    background-image: linear-gradient(315deg, #bfe1e4 0%, #f5f7f6 74%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: content-box;
   
 
     .titre-projets{
         position: relative;
     }
-
-    
-    
     
     h3{
         padding: 10px;
@@ -358,25 +350,6 @@ h1{
 }
 
 
-@media screen and (min-width: 700px){
-    .container-projects {
-        .portfolio{
-            grid-template-columns: repeat(3, 1fr);
-            margin: 0 auto;
-            .project{
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-            }
-        }
-        .project_body{
-            grid-column: span 3;
-        }
-    }
-}
-
-
 
 
 //Experiences
@@ -389,86 +362,7 @@ h1{
     }
 }
 
-.chat-bot{
-    width: 100px;
-}
 
-footer{
-    height: 12vh;
-    background:#1d282b;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-// @mixin white-gradient {
-// 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-// }
-
-// $animationSpeed: 40s;
-
-
-// @keyframes scroll {
-// 	0% { transform: translateX(0); }
-// 	100% { transform: translateX(calc(-250px * 7))}
-// }
-
-// .carroussel {
-// 	background: white;
-// 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-// 	height: 100px;
-// 	margin: 2rem auto;
-// 	overflow:hidden;
-// 	position: relative;
-// 	width: 960px;
-   
-	
-// 	&::before,
-// 	&::after {
-// 		@include white-gradient;
-// 		content: "";
-// 		height: 100px;
-// 		position: absolute;
-// 		width: 200px;
-// 		z-index: 2;
-// 	}
-	
-// 	&::after {
-// 		right: 0;
-// 		top: 0;
-// 		transform: rotateZ(180deg);
-// 	}
-
-// 	&::before {
-// 		left: 0;
-// 		top: 0;
-// 	}
-	
-// 	.image-container {
-// 		animation: scroll $animationSpeed linear infinite;
-// 		display: flex;
-// 		width: calc(250px * 8);
-// 	}
-	
-// 	.slide {
-// 		height: 100px;
-// 		width: 250px;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-        
-//         img{
-//             height: 60px;
-//             width: 250px;
-//             object-fit: contain;
-//         }
-//         .klesia{
-//             height: 40px;
-//         }
-// 	}
-// }
 
 @mixin white-gradient {
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
@@ -492,6 +386,7 @@ $animationSpeed: 40s;
 	overflow:hidden;
 	position: relative;
 	width: 960px;
+    margin: 30px auto;
 	
 	&::before,
 	&::after {
@@ -524,4 +419,51 @@ $animationSpeed: 40s;
 		height: 100px;
 		width: 250px;   
 	}
+}
+
+//section contact
+.contact{
+    padding-top: 140px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+    clip-path: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .bulle-contact{
+        width: 100px;
+    }
+    .container-contact{
+        display: flex;
+    }
+}
+
+footer{
+    height: 12vh;
+    background:#1d282b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//media-queries
+
+@media screen and (min-width: 700px){
+    .container-projects {
+        .portfolio{
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
+            .project{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        .project_body{
+            grid-column: span 3;
+        }
+    }
 }
