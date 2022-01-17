@@ -131,11 +131,18 @@ nav ul a:hover {
   z-index: 1;
   padding-top: 140px;
 }
-.bienvenue p {
+.bienvenue .pres {
   padding: 40px;
   color: white;
   font-size: 20px;
   text-align: center;
+}
+.bienvenue .pres span {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.bienvenue .pres span.fade {
+  opacity: 1;
 }
 .bienvenue .license {
   font-size: 11px;
@@ -436,7 +443,7 @@ h1 {
   align-items: center;
 }
 .contact .container-contact .infos-contact .bulle-contact {
-  width: 100px;
+  width: 80px;
 }
 
 footer {

@@ -147,12 +147,20 @@ nav{
     padding-top: 140px;
     
    
-    p{
+    .pres{
         padding: 40px;
         color: white;
         font-size: 20px;
         text-align: center;
+        span{
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        span.fade{
+            opacity: 1;
+        }
     }
+    
     .license{
         font-size: 11px;
         color: white;
@@ -351,7 +359,6 @@ h1{
             .project_body{
                 display: none;
                 overflow: hidden;
-                
             }
         }
         
@@ -486,12 +493,15 @@ $animationSpeed: 40s;
             justify-content: space-evenly;
             align-items: center;
             .bulle-contact{
-                width: 100px;
+                width: 80px;
             }
         }
         
     }  
+    
 }
+
+
 
 
 footer{

@@ -33,6 +33,7 @@ links.forEach(link => {
 //anim element scroll appear
 function scrollAppear(){
     const scrolledText = document.querySelectorAll('.scrolled');
+
     const screenPosition = window.innerHeight / 1.3;
 
     scrolledText.forEach(text => {
@@ -127,7 +128,36 @@ class Portfolio{
 
 new Portfolio('#js-portfolio');
 
-//image scale it
+//anim text pres
+const text = document.querySelector('.pres')
+const strText = text.textContent
+const splitText = strText.split("")
+text.textContent = ""
+
+for(let i = 0; i < splitText.length; i++){
+    text.innerHTML += "<span>" + splitText[i] + "</span>"
+}
+
+let char = 0
+let timer = setInterval(onTick, 50)
+
+function onTick(){
+    const span = text.querySelectorAll('span')[char]
+    span.classList.add('fade')
+    char++
+
+    // pour stopper l'animation une fonction que le texte ait apparu en entier
+    if(char === splitText.length){
+       complete()
+       return
+    }
+}
+
+function complete(){
+    clearInterval(timer)
+    timer = null
+}
+
 
 
 
