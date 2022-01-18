@@ -168,7 +168,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
   background-size: 80%;
-  animation: shine 5s linear 1;
+  animation: shine 3s linear 1;
   position: relative;
   margin: 0 auto;
   padding-top: 80px;
@@ -293,7 +293,7 @@ h1 {
 }
 .container-projects .portfolio .project {
   cursor: pointer;
-  margin-bottom: 50px;
+  margin: 20px 0 30px;
 }
 .container-projects .portfolio .project .project_description span {
   color: white;
@@ -333,6 +333,26 @@ h1 {
 .container-projects .portfolio .project .project_body {
   display: none;
   overflow: hidden;
+}
+
+.showProject h3 {
+  font-size: 17px;
+  font-style: italic;
+}
+.showProject a {
+  margin-right: 20px;
+  background: #242A2E;
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.showProject .site {
+  background: none;
+  color: #5d9da4;
+  font-weight: bold;
 }
 
 .experiences p {
@@ -443,24 +463,40 @@ h1 {
   font-weight: bold;
   margin: 0;
 }
+.contact .container-contact form *:last-child:hover {
+  background: transparent;
+  color: #7ed6df;
+  outline: 2px solid #7ed6df;
+  box-shadow: none;
+}
 .contact .container-contact .infos-contact {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
 }
-.contact .container-contact .infos-contact p i {
-  font-size: 28px;
+.contact .container-contact .infos-contact p a {
+  color: #5a5a5a;
+}
+.contact .container-contact .infos-contact p a > i, .contact .container-contact .infos-contact p i {
+  font-size: 30px;
   margin-right: 15px;
   cursor: pointer;
+  color: #5a5a5a;
 }
-.contact .container-contact .infos-contact p i:hover + span {
+.contact .container-contact .infos-contact p a:hover + span, .contact .container-contact .infos-contact p i:hover + span {
   opacity: 1;
 }
 .contact .container-contact .infos-contact p span {
   opacity: 0;
   transition: all 0.3s ease-in-out;
+}
+.contact .container-contact .infos-contact .cv a {
+  background-color: #5a5a5a;
+  color: white;
+  text-decoration: none;
+  padding: 0.2rem;
 }
 
 footer {

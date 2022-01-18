@@ -87,7 +87,8 @@ class Portfolio{
             this.scrollTo(child, offset)
             this.activeContent = content
             this.activeItem = child
-            
+            console.log(content)
+            content.classList.add('showProject')
         }
         
     }
@@ -146,7 +147,7 @@ function onTick(){
     span.classList.add('fade')
     char++
 
-    // pour stopper l'animation une fonction que le texte ait apparu en entier
+    // pour stopper l'animation une fois que le texte est apparu en entier
     if(char === splitText.length){
        complete()
        return
