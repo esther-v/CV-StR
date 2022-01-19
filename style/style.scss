@@ -572,8 +572,29 @@ footer{
     background:#1d282b;
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    a{
+       color: white;
+       font-size: 13px;
+       margin-top: 10px;
+    }
+}
+
+//mentions légales
+main{
+    padding: 3rem;
+    font-family: 'Montserrat', sans-serif; 
+    .retour{
+        background : #1d282b;
+        color: white;
+        text-decoration: none;
+        padding:0.3rem;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 //media-queries
