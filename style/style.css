@@ -252,7 +252,7 @@ h1 {
 
 .profil {
   position: absolute;
-  right: 80px;
+  right: 100px;
 }
 
 .scroll-appear {
@@ -294,6 +294,12 @@ h1 {
 .container-projects .portfolio .project {
   cursor: pointer;
   margin: 20px 0 30px;
+}
+.container-projects .portfolio .project:hover img {
+  filter: grayscale(100%);
+}
+.container-projects .portfolio .project:hover .project_name {
+  text-shadow: #b9c1c1 2px 3px;
 }
 .container-projects .portfolio .project .project_description span {
   color: white;
@@ -354,6 +360,9 @@ h1 {
   color: #5d9da4;
   font-weight: bold;
 }
+.showProject .site i {
+  color: #5d9da4;
+}
 
 .experiences p {
   text-align: center;
@@ -407,9 +416,9 @@ h1 {
 }
 
 .contact {
-  padding-top: 180px;
+  padding-top: 130px;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
   clip-path: content-box;
   display: flex;
   flex-direction: column;
@@ -421,13 +430,13 @@ h1 {
 }
 .contact .container-contact {
   display: flex;
-  width: 60%;
   justify-content: space-between;
+  width: 90%;
   margin-bottom: 30px;
+  align-items: space-between;
 }
 .contact .container-contact hr {
   color: #7ed6df;
-  margin: 0 40px 0 20px;
   border: 1px dashed #7ed6df;
 }
 .contact .container-contact form {
@@ -435,7 +444,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40%;
 }
 .contact .container-contact form * {
   width: min(600px, 92%);
@@ -470,7 +479,7 @@ h1 {
   box-shadow: none;
 }
 .contact .container-contact .infos-contact {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -496,7 +505,8 @@ h1 {
   background-color: #5a5a5a;
   color: white;
   text-decoration: none;
-  padding: 0.2rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 3px;
 }
 
 footer {
@@ -525,10 +535,15 @@ main .retour {
   padding: 0.3rem;
   border-radius: 5px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 1000px) {
+  .slider {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 880px) {
   .container-projects .portfolio {
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
@@ -541,6 +556,88 @@ main .retour {
   }
   .container-projects .project_body {
     grid-column: span 3;
+  }
+}
+@media screen and (max-width: 880px) {
+  .realisations {
+    margin-top: 40px;
+  }
+
+  .contact .container-contact {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .resume {
+    height: 140vh;
+  }
+  .resume .box {
+    margin: 30px auto;
+  }
+  .resume .profil {
+    position: initial;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .contact .container-contact {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+  .contact .container-contact form, .contact .container-contact .infos-contact {
+    width: 80%;
+  }
+  .contact .container-contact .infos-contact {
+    margin-top: 30px;
+    justify-content: space-around;
+  }
+  .contact .container-contact .infos-contact > * {
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .bienvenue h1 {
+    font-size: 30px;
+  }
+
+  .bienvenue .pres {
+    line-height: 30px;
+  }
+
+  .resume {
+    padding: 20px;
+  }
+  .resume .box {
+    width: 280px;
+    padding: 10px;
+  }
+
+  .contact {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .bienvenue {
+    padding: 140px 20px 20px;
+  }
+
+  .bienvenue h1 {
+    font-size: 22px;
+  }
+
+  .contact .container-contact form, .contact .container-contact .infos-contact {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 385px) {
+  .resume {
+    height: 150vh;
   }
 }
 
