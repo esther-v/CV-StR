@@ -424,6 +424,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .contact .bulle-contact {
   width: 70px;
@@ -601,8 +602,13 @@ main .retour {
   }
 }
 @media screen and (max-width: 630px) {
+  .bienvenue {
+    padding: 0;
+  }
+
   .bienvenue h1 {
     font-size: 30px;
+    padding-top: 180px;
   }
 
   .bienvenue .pres {
@@ -615,6 +621,11 @@ main .retour {
   .resume .box {
     width: 280px;
     padding: 10px;
+  }
+
+  .container-projects {
+    padding-left: 20px;
+    padding-right: 0;
   }
 
   .contact {
@@ -637,7 +648,10 @@ main .retour {
 }
 @media screen and (max-width: 385px) {
   .resume {
-    height: 150vh;
+    height: 170vh;
+  }
+  .resume .profil {
+    margin-bottom: 80px;
   }
 }
 

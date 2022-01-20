@@ -478,6 +478,7 @@ $animationSpeed: 40s;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     .bulle-contact{
         width: 70px;
     }
@@ -674,8 +675,12 @@ main{
     }
 }
 @media screen and (max-width: 630px){
+    .bienvenue{
+        padding:0;
+    }
     .bienvenue h1{
         font-size: 30px;
+       padding-top: 180px;
     }
     .bienvenue .pres{
         line-height: 30px;
@@ -686,6 +691,10 @@ main{
             width: 280px;
             padding: 10px;
         }
+    }
+    .container-projects{
+        padding-left: 20px;
+        padding-right: 0;
     }
     .contact{
         padding-left: 20px;
@@ -707,6 +716,9 @@ main{
 }
 @media screen and (max-width: 385px){
     .resume{
-        height: 150vh;
+        height: 170vh;
+        .profil{
+            margin-bottom: 80px;
+        }
     }
 }
