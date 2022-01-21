@@ -687,7 +687,24 @@ main{
         animation: none;
         color: white;
         padding-top: 140px;
-        z-index: 30;
+        -webkit-text-fill-color: none;
+        background-image: none;
+        background-clip: none;
+        position: initial;
+        background: none;
+
+       
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-repeat: no-repeat;
+
+  
+       
+
+   
+   
+
     }
     h2{
         margin: 40px auto 50px;
