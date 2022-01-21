@@ -616,8 +616,9 @@ main .retour {
   h1 {
     font-size: 30px;
     animation: none;
-    background-image: unset;
-    color: #1d282b;
+    color: white;
+    padding-top: 140px;
+    z-index: 30;
   }
 
   h2 {
