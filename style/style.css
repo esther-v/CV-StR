@@ -127,6 +127,7 @@ nav ul a:hover {
   background-position: bottom;
   filter: grayscale(90%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: content-box;
   z-index: 1;
   padding-top: 140px;
@@ -273,8 +274,6 @@ h1 {
   height: 100%;
   padding-bottom: 150px;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  clip-path: content-box;
 }
 .container-projects .titre-projets {
   position: relative;
@@ -419,6 +418,7 @@ h1 {
   padding-top: 130px;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
   clip-path: content-box;
   display: flex;
   flex-direction: column;
@@ -570,7 +570,7 @@ main .retour {
 }
 @media screen and (max-width: 750px) {
   .resume {
-    height: auto;
+    height: 140vh;
   }
   .resume .box {
     margin: 30px auto;
@@ -602,10 +602,6 @@ main .retour {
   }
 }
 @media screen and (max-width: 630px) {
-  section {
-    padding: 0;
-  }
-
   .bienvenue {
     padding: 0;
   }
@@ -620,6 +616,8 @@ main .retour {
   }
 
   .resume {
+    position: initial;
+    height: auto;
     padding: 20px;
   }
   .resume .box {
