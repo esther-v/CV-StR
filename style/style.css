@@ -600,6 +600,9 @@ main .retour {
     margin-bottom: 20px;
     margin-left: 20px;
   }
+  .contact .container-contact .infos-contact p span {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 630px) {
   .bienvenue {
@@ -613,6 +616,12 @@ main .retour {
   h1 {
     font-size: 30px;
     animation: none;
+    background-image: unset;
+    color: #1d282b;
+  }
+
+  h2 {
+    margin: 40px auto 50px;
   }
 
   .resume {
@@ -638,6 +647,7 @@ main .retour {
 
   .contact {
     padding: 0;
+    clip-path: unset;
   }
   .contact .container-contact {
     padding: 20px;
