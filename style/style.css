@@ -605,10 +605,13 @@ main .retour {
   .bienvenue {
     padding: 0;
   }
+  .bienvenue .pres {
+    padding: 20px;
+  }
 
   .bienvenue h1 {
     font-size: 30px;
-    opacity: 0;
+    animation: none;
   }
 
   .bienvenue .pres {
@@ -637,15 +640,15 @@ main .retour {
     padding-right: 0;
   }
 
+  .container-projects {
+    padding: 20px;
+  }
+
   .contact .container-contact {
     padding: 20px;
   }
 }
 @media screen and (max-width: 470px) {
-  .bienvenue {
-    padding: 140px 20px 20px;
-  }
-
   .bienvenue h1 {
     font-size: 22px;
   }

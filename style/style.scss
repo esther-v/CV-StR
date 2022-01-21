@@ -674,10 +674,15 @@ main{
 @media screen and (max-width: 630px){
     .bienvenue{
         padding:0;
+        .pres{
+            padding: 20px;
+        }
     }
     .bienvenue h1{
         font-size: 30px;
-        opacity:0;
+        animation: none;
+  
+        
     }
     .bienvenue .pres{
         line-height: 30px;
@@ -701,6 +706,9 @@ main{
         padding-left: 0;
         padding-right: 0;
     }
+    .container-projects{
+        padding: 20px;
+    }
     .contact{
         .container-contact{
             padding: 20px;
@@ -708,9 +716,7 @@ main{
     }
 }
 @media screen and (max-width: 470px){
-    .bienvenue{
-        padding: 140px 20px 20px;
-    }
+   
     .bienvenue h1{
         font-size: 22px;
     }
