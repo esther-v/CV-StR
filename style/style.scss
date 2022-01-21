@@ -313,7 +313,7 @@ h1{
         height: auto;
         .project {
             cursor: pointer;
-            margin: 20px 0 30px;
+            margin: 20px auto;
             &:hover img{
                 filter: grayscale(100%);
             }
@@ -677,7 +677,7 @@ main{
     }
     .bienvenue h1{
         font-size: 30px;
-       padding-top: 180px;
+        opacity:0;
     }
     .bienvenue .pres{
         line-height: 30px;
@@ -686,18 +686,25 @@ main{
         position: initial;
         height: auto;
         padding: 20px;
+        .collaborate, .drawing{
+            opacity: 0;
+        }
         .box{
             width: 280px;
             padding: 10px;
         }
     }
-    .container-projects{
-        padding-left: 20px;
+    .experiences{
+        padding: 20px;
+    }
+    .contact{
+        padding-left: 0;
         padding-right: 0;
     }
     .contact{
-        padding-left: 20px;
-        padding-right: 20px;
+        .container-contact{
+            padding: 20px;
+        }
     }
 }
 @media screen and (max-width: 470px){

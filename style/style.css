@@ -292,7 +292,7 @@ h1 {
 }
 .container-projects .portfolio .project {
   cursor: pointer;
-  margin: 20px 0 30px;
+  margin: 20px auto;
 }
 .container-projects .portfolio .project:hover img {
   filter: grayscale(100%);
@@ -608,7 +608,7 @@ main .retour {
 
   .bienvenue h1 {
     font-size: 30px;
-    padding-top: 180px;
+    opacity: 0;
   }
 
   .bienvenue .pres {
@@ -620,19 +620,25 @@ main .retour {
     height: auto;
     padding: 20px;
   }
+  .resume .collaborate, .resume .drawing {
+    opacity: 0;
+  }
   .resume .box {
     width: 280px;
     padding: 10px;
   }
 
-  .container-projects {
-    padding-left: 20px;
-    padding-right: 0;
+  .experiences {
+    padding: 20px;
   }
 
   .contact {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contact .container-contact {
+    padding: 20px;
   }
 }
 @media screen and (max-width: 470px) {
