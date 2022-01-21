@@ -676,17 +676,14 @@ main{
         padding:0;
         .pres{
             padding: 20px;
+            line-height: 30px;
         }
     }
-    .bienvenue h1{
+    h1{
         font-size: 30px;
         animation: none;
-  
-        
     }
-    .bienvenue .pres{
-        line-height: 30px;
-    }
+   
     .resume{
         position: initial;
         height: auto;
@@ -702,14 +699,12 @@ main{
     .experiences{
         padding: 20px;
     }
-    .contact{
-        padding-left: 0;
-        padding-right: 0;
-    }
+   
     .container-projects{
         padding: 20px;
     }
     .contact{
+        padding: 0;
         .container-contact{
             padding: 20px;
         }
@@ -723,14 +718,6 @@ main{
     .contact .container-contact{
         form, .infos-contact{
             width: 100%;
-        }
-    }
-}
-@media screen and (max-width: 385px){
-    .resume{
-        height: 170vh;
-        .profil{
-            margin-bottom: 80px;
         }
     }
 }

@@ -607,15 +607,12 @@ main .retour {
   }
   .bienvenue .pres {
     padding: 20px;
+    line-height: 30px;
   }
 
-  .bienvenue h1 {
+  h1 {
     font-size: 30px;
     animation: none;
-  }
-
-  .bienvenue .pres {
-    line-height: 30px;
   }
 
   .resume {
@@ -635,15 +632,13 @@ main .retour {
     padding: 20px;
   }
 
-  .contact {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .container-projects {
     padding: 20px;
   }
 
+  .contact {
+    padding: 0;
+  }
   .contact .container-contact {
     padding: 20px;
   }
@@ -655,14 +650,6 @@ main .retour {
 
   .contact .container-contact form, .contact .container-contact .infos-contact {
     width: 100%;
-  }
-}
-@media screen and (max-width: 385px) {
-  .resume {
-    height: 170vh;
-  }
-  .resume .profil {
-    margin-bottom: 80px;
   }
 }
 
