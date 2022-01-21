@@ -22,8 +22,7 @@ h2{
     text-align: center;
     margin: 0 auto 50px;
     text-transform: uppercase;
-    font-size: 32px;
-    
+    font-size: 32px;   
 }
 
 //---Accueil
@@ -394,7 +393,6 @@ h1{
 }
 
 
-
 //Experiences
 
 .experiences{
@@ -571,8 +569,6 @@ $animationSpeed: 40s;
 }
 
 
-
-
 footer{
     height: 12vh;
     background:#1d282b;
@@ -646,7 +642,6 @@ main{
        }
        .profil{
            position: initial;
-    
        }
     }
     .slider{
@@ -658,6 +653,9 @@ main{
         justify-content: space-between;
         align-items: center;
         height: auto;
+        hr{
+            opacity: 0;
+        }
         form, .infos-contact{
             width: 80%;
         }
@@ -687,24 +685,12 @@ main{
         animation: none;
         color: white;
         padding-top: 140px;
-        -webkit-text-fill-color: none;
         background-image: none;
-        background-clip: none;
         position: initial;
-        background: none;
-
-       
-    -webkit-background-clip: unset;
-    background-clip: unset;
-    -webkit-text-fill-color: unset;
-    background-repeat: no-repeat;
-
-  
-       
-
-   
-   
-
+        -webkit-background-clip: unset;
+        background-clip: unset;
+        -webkit-text-fill-color: unset;
+        background-repeat: no-repeat;
     }
     h2{
         margin: 40px auto 50px;
