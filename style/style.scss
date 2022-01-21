@@ -642,8 +642,9 @@ main{
 }
 
 @media screen and (max-width: 750px){
+    
     .resume {
-       height: 140vh;
+       height: auto;
        .box{
            margin: 30px auto;
        }
@@ -675,6 +676,9 @@ main{
     }
 }
 @media screen and (max-width: 630px){
+    section{
+        padding: 0;
+    }
     .bienvenue{
         padding:0;
     }

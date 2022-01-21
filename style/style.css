@@ -570,7 +570,7 @@ main .retour {
 }
 @media screen and (max-width: 750px) {
   .resume {
-    height: 140vh;
+    height: auto;
   }
   .resume .box {
     margin: 30px auto;
@@ -602,6 +602,10 @@ main .retour {
   }
 }
 @media screen and (max-width: 630px) {
+  section {
+    padding: 0;
+  }
+
   .bienvenue {
     padding: 0;
   }
