@@ -287,7 +287,6 @@ h1 {
   grid-template-columns: 1fr;
   grid-column-gap: 20px;
   grid-auto-flow: row dense;
-  padding-top: 20px;
   height: auto;
 }
 .container-projects .portfolio .project {
@@ -589,6 +588,9 @@ main .retour {
     align-items: center;
     height: auto;
   }
+  .contact .container-contact hr {
+    display: none;
+  }
   .contact .container-contact form, .contact .container-contact .infos-contact {
     width: 80%;
   }
@@ -618,11 +620,8 @@ main .retour {
     animation: none;
     color: white;
     padding-top: 140px;
-    -webkit-text-fill-color: none;
     background-image: none;
-    background-clip: none;
     position: initial;
-    background: none;
     -webkit-background-clip: unset;
     background-clip: unset;
     -webkit-text-fill-color: unset;
@@ -664,7 +663,7 @@ main .retour {
 }
 @media screen and (max-width: 470px) {
   .bienvenue h1 {
-    font-size: 22px;
+    font-size: 25px;
   }
 
   .contact .container-contact form, .contact .container-contact .infos-contact {
