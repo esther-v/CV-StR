@@ -104,7 +104,7 @@ nav{
         flex-direction: column;
         list-style-type: none;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         gap: 20px;
         background: rgba(0,0,0,0.7);
         position: fixed;
@@ -118,11 +118,11 @@ nav{
   
 }
 .menu{
-    opacity: 0;
+    display: none;
 }
 
 .open{
-    opacity: 1;
+    display: flex;
 }
 
 .anim-nav {
@@ -294,7 +294,9 @@ h1{
 .container-projects{
     height: 100%;
     padding-bottom: 150px;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-color: #b8c6db;
+background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
    
     .titre-projets{
         position: relative;
@@ -465,7 +467,9 @@ $animationSpeed: 40s;
 //section contact
 .contact{
     padding-top: 130px;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
     clip-path: content-box;
@@ -485,8 +489,7 @@ $animationSpeed: 40s;
         align-items: space-between;
         
         hr{
-            color: #7ed6df;
-            border: 1px dashed #7ed6df;
+            border: 1px dashed #1d282b;
         }
         form{
             display: flex;
@@ -498,12 +501,12 @@ $animationSpeed: 40s;
             *{
                 width: min(600px, 92%);
                 height: 40px;
-                background: #EAEAEA;
+                background: rgba(206, 206, 206, 0.64);
                 border-radius: 6px;
                 padding: 15px 30px;
                 margin-bottom: 20px;
                 font-size: 16px;
-                color: #828282;
+                color: #1d282b;
                 border: none;
                 font-family: inherit;
             }
@@ -511,7 +514,7 @@ $animationSpeed: 40s;
                 height: 100px;
             }
             
-            *:last-child{
+            .submit{
             width: 140px;
             background: #1d282b;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
@@ -521,10 +524,11 @@ $animationSpeed: 40s;
             height: auto;
             font-weight: bold;
             margin: 0;
+            cursor: pointer;
             &:hover{
                 background: transparent;
-                color: #7ed6df;
-                outline: 2px solid #7ed6df;
+                color: #1d282b;
+                outline: 2px solid #1d282b;
                 box-shadow: none;
             }
             }
@@ -545,12 +549,16 @@ $animationSpeed: 40s;
                     margin-right: 15px;
                     cursor: pointer;
                     color:#5a5a5a;
+                    &:hover{
+                        color: #1d282b;
+                       
+                    }
                 }
                 a:hover + span, i:hover+span{
-                    opacity: 1;
+                    text-shadow: #b9c1c1 2px 3px;
                 }
                 span{
-                    opacity: 0;
+                   
                     transition: all 0.3s ease-in-out;
                 }
                 
@@ -561,7 +569,11 @@ $animationSpeed: 40s;
                 text-decoration: none;
                 padding: 0.3rem 0.4rem;
                 border-radius: 3px;
+                &:hover{
+                    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+                }
             }
+
         }
         
     }  
