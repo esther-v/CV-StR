@@ -148,7 +148,7 @@ nav{
     .pres{
         padding: 40px;
         color: white;
-        font-size: 20px;
+        font-size: 25px;
         text-align: center;
         span{
             opacity: 0;
@@ -516,7 +516,7 @@ $animationSpeed: 40s;
             
             .submit{
             width: 140px;
-            background: #1d282b;
+            background: #5a5a5a;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
             border-radius: 47px;
             font-size: 16px;
@@ -527,8 +527,8 @@ $animationSpeed: 40s;
             cursor: pointer;
             &:hover{
                 background: transparent;
-                color: #1d282b;
-                outline: 2px solid #1d282b;
+                color: #5a5a5a;
+                outline: 2px solid #5a5a5a;
                 box-shadow: none;
             }
             }
@@ -567,8 +567,8 @@ $animationSpeed: 40s;
                 background-color: #5a5a5a;
                 color: white;
                 text-decoration: none;
-                padding: 0.3rem 0.4rem;
-                border-radius: 3px;
+                padding: 0.4rem 0.5rem;
+                border-radius: 5px;
                 &:hover{
                     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
                 }
