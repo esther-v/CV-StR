@@ -277,7 +277,7 @@ h1 {
 
 .container-projects {
   height: 100%;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
   background-color: #b8c6db;
   background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
@@ -298,6 +298,12 @@ h1 {
 .container-projects .portfolio .project {
   cursor: pointer;
   margin: 20px auto;
+  width: 300px;
+}
+.container-projects .portfolio .project .project_infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container-projects .portfolio .project:hover img {
   filter: grayscale(100%);
@@ -337,7 +343,7 @@ h1 {
   background: #CE679B;
 }
 .container-projects .portfolio .project .project_image {
-  width: 250px;
+  width: 300px;
   height: auto;
 }
 .container-projects .portfolio .project .project_body {
@@ -345,6 +351,20 @@ h1 {
   overflow: hidden;
 }
 
+.detailProject .project_infos img {
+  filter: grayscale(100%);
+}
+.detailProject .project_infos .project_name {
+  text-shadow: #b9c1c1 2px 3px;
+}
+
+.showProject {
+  margin: 0 auto;
+  width: 300px;
+  padding: 10px;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.25);
+  margin-bottom: 20px;
+}
 .showProject h3 {
   font-size: 17px;
   font-style: italic;
@@ -550,12 +570,7 @@ main .retour {
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 1000px) {
-  .slider {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 1050px) {
   .container-projects .portfolio {
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
@@ -568,6 +583,11 @@ main .retour {
   }
   .container-projects .project_body {
     grid-column: span 3;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .slider {
+    width: 90%;
   }
 }
 @media screen and (max-width: 880px) {
@@ -614,8 +634,9 @@ main .retour {
     margin-bottom: 20px;
     margin-left: 20px;
   }
-  .contact .container-contact .infos-contact p span {
-    opacity: 1;
+  .contact .container-contact .infos-contact .cv {
+    display: block;
+    margin: 30px auto;
   }
 }
 @media screen and (max-width: 630px) {
@@ -625,6 +646,7 @@ main .retour {
   .bienvenue .pres {
     padding: 20px;
     line-height: 30px;
+    font-size: 18px;
   }
 
   h1 {
@@ -650,7 +672,7 @@ main .retour {
     padding: 20px;
   }
   .resume .collaborate, .resume .drawing {
-    opacity: 0;
+    display: none;
   }
   .resume .box {
     width: 280px;

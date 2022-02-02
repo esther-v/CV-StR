@@ -30,6 +30,8 @@ links.forEach(link => {
 })
 
 
+
+
 //anim element scroll appear
 function scrollAppear(){
     const scrolledText = document.querySelectorAll('.scrolled');
@@ -64,11 +66,13 @@ class Portfolio{
             child.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.show(child)
+                
             } )
         })
         
     }
-    //Affiche le contenu d'un projet au clic
+    
+//     //Affiche le contenu d'un projet au clic
     show(child) {
         let offset = 0
         if (this.activeContent !== null) {
@@ -88,6 +92,8 @@ class Portfolio{
             this.activeContent = content
             this.activeItem = child
             console.log(content)
+            console.log(content.previousSibling)
+            content.previousSibling.classList.add('detailProject')
             content.classList.add('showProject')
         }
         
@@ -111,7 +117,9 @@ class Portfolio{
         element.offsetHeight // Force le repaint
         element.style.height = '0px'
         window.setTimeout( () => {
+            element.previousSibling.classList.remove('detailProject')
             element.parentNode.removeChild(element)
+            console.log(element)
         }, 500)
     }
 
