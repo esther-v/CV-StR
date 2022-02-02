@@ -703,6 +703,13 @@ main .retour {
   .contact .container-contact form, .contact .container-contact .infos-contact {
     width: 100%;
   }
+
+  .container-projects .portfolio .project {
+    width: 250px;
+  }
+  .container-projects .portfolio .project .project_image {
+    width: 250px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
