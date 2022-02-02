@@ -137,6 +137,32 @@ class Portfolio{
 
 new Portfolio('#js-portfolio');
 
+////DISPLAYING PROJECTS BY category
+
+const btns = document.querySelectorAll('.btn');
+const allProjects = document.querySelectorAll('.project');
+
+for (i = 0; i < btns.length; i ++) {
+    btns[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const filter = e.target.dataset.filter;
+
+        allProjects.forEach((project) => {
+            if (filter == "all") {
+                project.style.display = "block";
+            } else {
+                if (project.classList.contains(filter)) {
+                    project.style.display = "block";
+    
+                } else {
+                    project.style.display = "none"
+                }
+            }
+        })
+    })
+}
+
 //anim text pres
 const text = document.querySelector('.pres')
 const strText = text.textContent

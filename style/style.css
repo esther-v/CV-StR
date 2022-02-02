@@ -275,6 +275,22 @@ h1 {
   text-shadow: #b9c1c1 2px 3px;
 }
 
+.filter-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #5a5a5a;
+  font-size: 18px;
+}
+.btn:hover {
+  color: black;
+}
+
 .container-projects {
   height: 100%;
   padding-bottom: 80px;
