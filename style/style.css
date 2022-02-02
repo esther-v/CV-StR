@@ -710,8 +710,9 @@ main .retour {
   .container-projects .portfolio .project .project_image {
     width: 250px;
   }
-  .container-projects .portfolio .project .project_body a:last-of-type {
-    display: block;
+
+  .showProject a:last-of-type {
+    display: inline-block;
   }
 }
 
