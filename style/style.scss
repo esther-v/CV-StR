@@ -783,5 +783,8 @@ main{
         .project_image{
             width: 250px;
         }
+        .project_body a:last-of-type {
+            display: block;
+        }
     }
 }
