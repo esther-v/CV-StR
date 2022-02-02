@@ -382,13 +382,12 @@ h1{
 
 .detailProject{
     .project_infos{
-        box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3),
-                    12px 12px 16px rgba(255,255,255,0.25);
         img{
             filter: grayscale(100%);
         }
         .project_name{
             text-shadow: #b9c1c1 2px 3px;
+            font-style: italic;
         }
     }
 }
