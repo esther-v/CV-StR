@@ -135,7 +135,7 @@ nav ul a:hover {
 .bienvenue .pres {
   padding: 40px;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
 }
 .bienvenue .pres span {
@@ -351,6 +351,9 @@ h1 {
   overflow: hidden;
 }
 
+.detailProject .project_infos {
+  box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
+}
 .detailProject .project_infos img {
   filter: grayscale(100%);
 }
@@ -360,10 +363,9 @@ h1 {
 
 .showProject {
   margin: 0 auto;
-  width: 300px;
-  padding: 10px;
+  width: 100%;
+  padding: 20px;
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.25);
-  margin-bottom: 20px;
 }
 .showProject h3 {
   font-size: 17px;

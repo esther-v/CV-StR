@@ -88,7 +88,7 @@ class Portfolio{
             let content = child.querySelector('.js-body').cloneNode(true)
             child.after(content)
             this.slideDown(content)
-            this.scrollTo(child, offset)
+            // this.scrollTo(child, offset)
             this.activeContent = content
             this.activeItem = child
             console.log(content)
@@ -124,14 +124,14 @@ class Portfolio{
     }
 
     // Fait défiler la fenêtre jusqu'à l'élément
-    scrollTo (element, offset = 0) {
-        window.scrollTo({
-            behavior : "smooth",
-            left : 0,
-            top : element.offsetTop - offset
+    // scrollTo (element, offset = 0) {
+    //     window.scrollTo({
+    //         behavior : "smooth",
+    //         left : 0,
+    //         top : element.offsetTop - offset
             
-        })
-    }
+    //     })
+    // }
 
 }
 
