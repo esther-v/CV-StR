@@ -282,7 +282,7 @@ h1 {
 }
 
 .btn {
-  margin-right: 20px;
+  margin: 0 10px;
   text-decoration: none;
   color: #5a5a5a;
   font-size: 18px;
@@ -729,6 +729,10 @@ main .retour {
 
   .showProject a:last-of-type {
     display: inline-block;
+  }
+
+  .filter-box .btn {
+    font-size: 15px;
   }
 }
 

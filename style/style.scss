@@ -302,7 +302,7 @@ h1{
     margin-bottom: 20px;
 }
 .btn{
-    margin-right: 20px;
+    margin: 0 10px;
     text-decoration: none;
     color: #5a5a5a;
     font-size: 18px;
@@ -789,6 +789,7 @@ main{
     .bienvenue h1{
         font-size: 25px;
     }
+
     .contact .container-contact{
         form, .infos-contact{
             width: 100%;
@@ -806,4 +807,10 @@ main{
             display: inline-block;
         }
     }
+
+    .filter-box{
+        .btn{
+            font-size: 15px;
+        }  
+    }  
 }
