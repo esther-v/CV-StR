@@ -586,6 +586,8 @@ $animationSpeed: 40s;
             align-items: flex-start;
            
             p{
+                display: flex;
+                align-items: center;
                 a{
                     color:#5a5a5a;
                 }
@@ -594,6 +596,7 @@ $animationSpeed: 40s;
                     margin-right: 15px;
                     cursor: pointer;
                     color:#5a5a5a;
+            
                     &:hover{
                         color: #1d282b;
                        

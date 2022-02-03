@@ -528,6 +528,10 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
 }
+.contact .container-contact .infos-contact p {
+  display: flex;
+  align-items: center;
+}
 .contact .container-contact .infos-contact p a {
   color: #5a5a5a;
 }
