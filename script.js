@@ -30,8 +30,6 @@ links.forEach(link => {
 })
 
 
-
-
 //anim element scroll appear
 function scrollAppear(){
     const scrolledText = document.querySelectorAll('.scrolled');
